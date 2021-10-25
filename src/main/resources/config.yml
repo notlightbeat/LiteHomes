@@ -1,0 +1,84 @@
+# All messages accept color coding using the & symbol
+
+# All block materials can be seen at https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# (These materials may/will be different depending on the version your server is running at)
+
+# Delay in seconds before teleporting the player. Setting it to 0 will result in instant teleportation
+teleport-delay: 5
+# Backup the database file once the plugin gets disabled (only applies for SQLite databases)
+backup-database-on-disable: true
+# Should we cancel the teleport if the player moves?
+cancel-teleport-on-move: true
+# Should we cancel the teleport if the player gets damaged?
+cancel-teleport-on-damage: true
+
+# Max number of homes per permission
+# Each permission follows the next format: litehomes.<permission>
+# For example, an entry named "donator" will have the permission "litehomes.donator"
+max-homes:
+  default: 5
+  donator: 20
+
+messages:
+  # Set the [LiteHomes] prefix at the beginning of each message
+  set-prefix: true
+  # /home error message
+  home-not-exists: "&cThat home does not exist"
+  # /sethome help message
+  home-not-specified: "&cYou have to specify a home. Usage: /sethome {home name}"
+  # /sethome alert message when clicking on an empty home in the GUI
+  set-home-alert: "&9To set a new home, use &b/sethome <homeName>"
+  # /sethome command success message
+  set-home-success: "&9Home set"
+  # Message to tell the player that the home they're trying to set has a duplicate name
+  set-home-error: "&cThe name is already in use"
+  # Message that'll be shown to the player when they delete a home
+  del-home-success: "&9Home deleted"
+  # Message showing the teleport delay to the player
+  # %seconds% is the placeholder for the number of seconds.
+  teleport-delay: "&9You'll be teleported in &b%seconds% &9seconds"
+  # Max amount of homes message
+  max-homes: "&cMax amount of homes reached"
+  # Message to show to the player when they try to teleport to a home while already having another request pending
+  teleport-request-pending: "&cYou already have a teleport request pending!"
+  # Message to tell the player that their request got cancelled because they moved
+  teleport-cancelled-on-move: "&cYour teleport request got cancelled because you moved!"
+  # Message to tell the player that their request got cancelled because they got damaged by another entity
+  teleport-cancelled-on-damage: "&cYour teleport request got cancelled because you received damage!"
+  # Should the player receive the command usage when not meeting the required arguments for it?
+  send-command-usage-on-missing-args: true
+  # Command error messages
+  not-enough-args-error-message: "&cThis command requires more arguments!"
+  permission-missing-error-message: "&cYou don't have permissions to execute this command!"
+  player-only-command-error-message: "&cThis command can only be executed by players"
+  op-only-command-error-message: "&cYou don't have permissions to execute this command!"
+
+gui:
+  # Title of the Homes GUI
+  home-screen-title: "&9Homes"
+  # Title of the Delete Homes GUI
+  del-home-screen-title: "&9Delete Homes"
+  # Number of rows in the GUI
+  number-of-rows: 1
+  # Shows the home's coordinates as the item lore
+  show-coordinates: true
+  # Classify homes by dimension? (grass for the Overworld, netherrack for the Nether, endstone for The End)
+  show-homes-by-dimension: true
+  # If the option above is set to false, what block should we use to show each home?
+  home-block: CONCRETE
+  # Show empty homes with a certain block
+  show-empty-homes: true
+  # Name of the empty home item. %index% is the placeholder for the empty home number
+  empty-home-item-name: "&7&lEmpty home &r&7%index%"
+  # Block that is used for the available homes items
+  empty-homes-block: GLASS
+  # Name of the delete-homes item
+  delete-homes-item-name: "&cDelete homes"
+  # Block that is used for the delete-homes item
+  delete-homes-block: BARRIER
+  # Name of the previous page item
+  previous-page-item-name: "&9Previous page"
+  # Name of the next page item
+  next-page-item-name: "&9Next page"
+  # Block that is used for the previous and next page items
+  page-change-block: ARROW

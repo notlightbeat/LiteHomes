@@ -1,0 +1,39 @@
+name: LiteHomes
+version: ${project.version}
+main: xyz.notlightbeat.litehomes.LiteHomes
+authors: [ NotLightBeat ]
+description: Homes plugin with SQLite integration.
+commands:
+  home:
+    description: Teleports you to one of your homes.
+    usage: /home {home}
+  homes:
+    description: Shows up your current homes.
+    usage: /homes
+  sethome:
+    description: Sets a home at your location.
+    usage: /sethome {name}
+  delhome:
+    description: Deletes one of your homes.
+    usage: /delhome {home}
+  lhreload:
+    description: Reloads the configuration file.
+    usage: /lhreload
+permissions:
+  litehomes.command.home:
+    description: /home command permission
+    default: op
+  litehomes.command.homes:
+    description: /homes command permission
+    default: op
+  litehomes.command.sethome:
+    description: /sethome command permission
+    default: op
+  litehomes.command.delhome:
+    description: /delhome command permission
+    default: op
+  litehomes.command.reload:
+    description: /lhreload command permission
+  litehomes.tpdelayoverride:
+    description: Permission to avoid delay when teleporting.
+    default: op
